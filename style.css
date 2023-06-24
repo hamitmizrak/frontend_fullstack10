@@ -36,4 +36,6 @@
     letter-spacing: 0.8px;
     word-spacing: 3px;
     line-height: 20px;
+    
+    cursor: pointer;
 }
