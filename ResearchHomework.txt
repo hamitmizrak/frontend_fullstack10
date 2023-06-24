@@ -1,0 +1,16 @@
+-- LİNKLER
+EMMET     ==> https://docs.emmet.io/cheat-sheet/
+HTML5     ==> https://www.w3schools.com/html/
+CSS3      ==> https://www.w3schools.com/css/
+JS        ==> https://www.w3schools.com/js/default.asp
+BOOTSTRAP ==> https://www.w3schools.com/bootstrap5/
+JQUERY    ==> https://www.w3schools.com/jquery/default.asp
+
+
+-- Araştırma Ödevleri
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+s1-) Buradaki integrity,sha384, rel="stylesheet", crossorigin="anonymous" nedir ?
+s2-) Semantic ve non-semantic nedir ? örnekler bize açıklayın
+s3-) Responsive Design CSS nedir ?
