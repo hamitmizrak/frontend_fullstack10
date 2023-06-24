@@ -15,4 +15,7 @@
 
     /* dış boşluk */
     margin: 10px 20px;
+
+    /* çerceve */
+    border: 5px solid red;
 }
