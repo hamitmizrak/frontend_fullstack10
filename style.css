@@ -12,6 +12,18 @@
     text-align: center;
 }
 
+img{
+    max-width: 100%; 
+    height: auto;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.8);
+}
+img:hover{
+    opacity: 0.8;
+    transition: 1.5s all;
+    transform: rotate(360deg);
+    box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.8);
+}
+
 /* #parag_id { */
 .parag_class {
     color: blue;
