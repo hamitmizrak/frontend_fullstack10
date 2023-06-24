@@ -24,6 +24,14 @@ img:hover{
     box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.8);
 }
 
+p{
+    font-size: 8px!important;
+    text-align: justify;
+    padding:0px 5px;
+    margin-top:10px;
+    text-indent: 10px;
+}
+
 /* #parag_id { */
 .parag_class {
     color: blue;
