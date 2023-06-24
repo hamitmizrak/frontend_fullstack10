@@ -1,4 +1,5 @@
 -- LİNKLER
+GİTHUB    ==> https://github.com/hamitmizrak/frontend_fullstack10.git
 EMMET     ==> https://docs.emmet.io/cheat-sheet/
 HTML5     ==> https://www.w3schools.com/html/
 CSS3      ==> https://www.w3schools.com/css/
@@ -14,3 +15,5 @@ JQUERY    ==> https://www.w3schools.com/jquery/default.asp
 s1-) Buradaki integrity,sha384, rel="stylesheet", crossorigin="anonymous" nedir ?
 s2-) Semantic ve non-semantic nedir ? örnekler bize açıklayın
 s3-) Responsive Design CSS nedir ?
+s4-) Hexadecimal, Binary, Decimal nedir ?
+s5-) Override nedir ?

@@ -1,0 +1,18 @@
+#parag1 {
+    color: blue;
+    color: #123;
+    color: #5fa3e6;
+
+    background-color: #123;
+
+    /* iç boşluk */
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding: 30px 20px 30px 10px;
+    padding: 30px 20px;
+
+    /* dış boşluk */
+    margin: 10px 20px;
+}
