@@ -1,4 +1,5 @@
-#parag1 {
+/* #parag_id { */
+.parag_class {
     color: blue;
     color: #123;
     color: #5fa3e6;
@@ -18,4 +19,21 @@
 
     /* çerceve */
     border: 5px solid red;
+
+    /* text */
+    text-decoration: line-through;
+    text-decoration: none;
+    text-indent: 15%;
+    text-align: justify;
+    text-transform: capitalize;
+
+    /* font */
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
+    line-height: 20px;
 }
