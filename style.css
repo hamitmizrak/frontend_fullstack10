@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+#table_id >thead,tbody{
+    border:1px solid blue;
+}
+
+#table_id > tfoot{
+    text-align: center;
+}
+
 /* #parag_id { */
 .parag_class {
     color: blue;
