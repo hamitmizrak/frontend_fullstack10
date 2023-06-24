@@ -46,6 +46,30 @@
     cursor: pointer;
 }
 
+    /* Menu*/
+    #menu{
+       list-style-type: none; 
+    }
+
+    #menu >li{
+        display: inline-block;
+        border:1px solid rgba(0,0,0,0.1);
+        padding: 0 3px;
+        background-color: brown;
+        color:rgb(224, 220, 228);
+        transition: 1.5s all;
+        box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.7);
+        text-transform: uppercase;
+    }
+
+    #menu >li:hover{
+        background-color: rgb(224, 220, 228) ;
+        color:brown; 
+        box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+        transform: rotate(-360deg);
+        cursor: pointer;
+    }
+
 .div_class{
     background-color: blue;
     color:black;
