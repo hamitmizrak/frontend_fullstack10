@@ -25,7 +25,7 @@ img:hover{
 }
 
 p{
-    font-size: 8px!important;
+    font-size: 15px!important;
     text-align: justify;
     padding:0px 5px;
     margin-top:10px;
@@ -104,6 +104,14 @@ p{
     width: 100%;
     height: 150px;
     display: inline-block;
+}
+#form_div{
+    margin-left: 5%;
+    width: 50%;
+}
+
+#uName{
+    width: 100%;
 }
 
 @media screen and (min-width:760px){
