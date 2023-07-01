@@ -146,42 +146,61 @@ Formül: (derece*9/5)+32
 
 /////////////////////////////////////////////////////////////////
 // Sayı
-let number1;
+// let number1;
 
-number1=44;
-console.log(number1);
+// number1=44;
+// console.log(number1);
 
-number1=44.55;
-console.log(number1);
-console.log(typeof number1);
+// number1=44.55;
+// console.log(number1);
+// console.log(typeof number1);
 
-number1=Number(number1);
+// number1=Number(number1);
 
 // isNaN => false=Sayı
-// isNaN => true =Sayı değil
-console.log(isNaN(44)); 
+// // isNaN => true =Sayı değil
+// console.log(isNaN(44)); 
 
-//Bilimsel Göster
-let bilimsel=1400000;
-console.log(bilimsel);
+// //Bilimsel Göster
+// let bilimsel=1400000;
+// console.log(bilimsel);
 
-let bilimsel2=1.4E+6;
-console.log(bilimsel2);
+// let bilimsel2=1.4E+6;
+// console.log(bilimsel2);
 
 //Sayı Sistemleri
-let binary=0b010;
-console.log(binary);
+// let binary=0b010;
+// console.log(binary);
 
-let octal=0o7521;
-console.log(octal);
+// let octal=0o7521;
+// console.log(octal);
 
-let decimal=7852;
-console.log(decimal);
+// let decimal=7852;
+// console.log(decimal);
 
-let hexadecimal=0xA25;
-console.log(hexadecimal);
+// let hexadecimal=0xA25;
+// console.log(hexadecimal);
 
 /////////////////////////////////////////////////////////////////
-// Kelime
-// String
+// Kelime // String
+const vocabulary="Veri Java işlemleri Java ";
+console.log(vocabulary.length);
+console.log(vocabulary.trim().length);
+console.log(vocabulary.toLowerCase());
+console.log(vocabulary.toUpperCase());
+console.log(vocabulary.startsWith("Java"));
+console.log(vocabulary.endsWith("asd"));
+
+console.log(vocabulary.concat("sona ekle").concat(" data"));
+console.log(vocabulary.replace(vocabulary,"Eski data"));
+
+console.log(vocabulary.substring(1));
+console.log(vocabulary.substring(0,3));
+
+console.log(vocabulary.charAt(0));
+
+console.log(vocabulary.indexOf("Java"));
+console.log(vocabulary.lastIndexOf("Java"));
+
+/////////////////////////////////////////////////////////////////
 // Fonkisyonlar
