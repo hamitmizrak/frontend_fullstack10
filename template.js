@@ -205,7 +205,7 @@ console.log(vocabulary.lastIndexOf("Java"));
 /////////////////////////////////////////////////////////////////
 // ÖDEV NOT:5 adımı beraber yapalım
 // kullanıcı tarafından girilen bir kelimenin (prompt)
-// let userData= prompt("Lütfen bir şeyler yazınız")  ;
+// let userData= prompt("Lütfen bir şeyler yazınız");
 // S-1) Kaç karakterlidir ? (length)
 // S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
 // S-3) bütün kelimeyi küçük harfle göstermek ? (toLowerCase())
