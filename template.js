@@ -125,27 +125,63 @@ Formül: (derece*9/5)+32
 
 /////////////////////////////////////////////////////////////////
 // Math
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-console.log(Math.sqrt(16));
-console.log(Math.pow(2,5));
-console.log(Math.abs(-15));
+// console.log(Math.sqrt(16));
+// console.log(Math.pow(2,5));
+// console.log(Math.abs(-15));
 
-console.log(Math.min(-15,100,9,52));
-console.log(Math.max(-15,100,9,52));
+// console.log(Math.min(-15,100,9,52));
+// console.log(Math.max(-15,100,9,52));
 
-console.log(Math.sin(45));
+// console.log(Math.sin(45));
 
-console.log(Math.floor(8.9));
-console.log(Math.ceil(8.1));
-console.log(Math.round(5.4));
-console.log(Math.round(5.5));
+// console.log(Math.floor(8.9));
+// console.log(Math.ceil(8.1));
+// console.log(Math.round(5.4));
+// console.log(Math.round(5.5));
 
-console.log(Math.floor(Math.random()*9+1));
+// console.log(Math.floor(Math.random()*9+1));
 
 /////////////////////////////////////////////////////////////////
 // Sayı
+let number1;
+
+number1=44;
+console.log(number1);
+
+number1=44.55;
+console.log(number1);
+console.log(typeof number1);
+
+number1=Number(number1);
+
+// isNaN => false=Sayı
+// isNaN => true =Sayı değil
+console.log(isNaN(44)); 
+
+//Bilimsel Göster
+let bilimsel=1400000;
+console.log(bilimsel);
+
+let bilimsel2=1.4E+6;
+console.log(bilimsel2);
+
+//Sayı Sistemleri
+let binary=0b010;
+console.log(binary);
+
+let octal=0o7521;
+console.log(octal);
+
+let decimal=7852;
+console.log(decimal);
+
+let hexadecimal=0xA25;
+console.log(hexadecimal);
+
+/////////////////////////////////////////////////////////////////
 // Kelime
 // String
 // Fonkisyonlar
