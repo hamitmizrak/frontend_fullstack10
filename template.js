@@ -87,7 +87,7 @@ Formül: (derece*9/5)+32
 // örnek-4
 // operatör işlemleri: aşağıdaki örneği javascript ile yapalım
 // 4+3*2(3:3-1*6+9:1+(3:3));
-console.log(4+3*2*(3/3-1*6+9/1+(3/3)));
+// console.log(4+3*2*(3/3-1*6+9/1+(3/3)));
 
 /////////////////////////////////////////////////////////////////
 // cast
@@ -110,14 +110,14 @@ console.log(4+3*2*(3/3-1*6+9/1+(3/3)));
 
 // undefined NaN isNaN infinity
 //undefined // tanımsız bir değişkene atanmış degerdir
-let data4;
-console.log(data4);
+// let data4;
+// console.log(data4);
 
 //NaN 
-console.log("kelime"/4)
+// console.log("kelime"/4)
 
 //infinity
-console.log(555/0);
+// console.log(555/0);
 
 //null      // boş veri tipidir ve herhangi biri null olarak atandığında
 //isNaN()   // eksik veya hatalı girişler için kullanılır
@@ -125,6 +125,26 @@ console.log(555/0);
 
 /////////////////////////////////////////////////////////////////
 // Math
+console.log(Math.PI);
+console.log(Math.E);
+
+console.log(Math.sqrt(16));
+console.log(Math.pow(2,5));
+console.log(Math.abs(-15));
+
+console.log(Math.min(-15,100,9,52));
+console.log(Math.max(-15,100,9,52));
+
+console.log(Math.sin(45));
+
+console.log(Math.floor(8.9));
+console.log(Math.ceil(8.1));
+console.log(Math.round(5.4));
+console.log(Math.round(5.5));
+
+console.log(Math.floor(Math.random()*9+1));
+
+/////////////////////////////////////////////////////////////////
 // Sayı
 // Kelime
 // String
