@@ -219,6 +219,18 @@ console.log(vocabulary.lastIndexOf("Java"));
 // S-9) girdiğiniz kelimenin sonuna "-ben js öğreniyorum" (concat())
 // S-10) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin? (subString())
 
-
 //////////////////////////////////////////////////////////////////
 // Fonkisyonlar
+// Conditional(if/Else)
+// Ternary
+// Switch Case 
+// Loop
+// break return continue
+// try catch
+// errorn handling
+// debugger
+
+// Callback function
+// promise
+// Asyn/await
+
