@@ -474,12 +474,11 @@ let tryCatchTutorials = () => {
     }
     console.log("son satır");
 }
-tryCatchTutorials()
+tryCatchTutorials();
 
 // error handling
 // debug nasıl atılır ?
 //////////////////////////////////////////////////////////////////
-
 // Diziler
 // Objectler
 // DOM
