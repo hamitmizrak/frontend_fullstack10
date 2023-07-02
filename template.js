@@ -430,7 +430,7 @@ let sumExamples = () => {
     console.log("Çift sayısı: " + evenCounter);
     console.log("Çift Toplam: " + evenSum);
 }
-sumExamples()
+//sumExamples()
 
 ///////////////////////////////////////////////////////////////////////////////////data1
 //Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
@@ -461,6 +461,21 @@ sumExamples()
 
 //////////////////////////////////////////////////////////////////
 // try catch
+let tryCatchTutorials = () => {
+
+    try {
+        alertx("deneme");
+    } catch (error) {
+        console.log("Hata mesajı: " + error.message);
+        console.log("Hata mesajı adı: " + error.name);
+        console.error(error);
+    } finally {
+        console.log("port.closed")
+    }
+    console.log("son satır");
+}
+tryCatchTutorials()
+
 // error handling
 // debug nasıl atılır ?
 //////////////////////////////////////////////////////////////////
