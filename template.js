@@ -386,7 +386,9 @@ let result = () => {
 // Dikkat: Bu algoritmayı Arrow Function ile yapalım.
 // (Clean code kuralları çercevesinde ) algoritma yapan program?
 let sumExamples = () => {
-    let commonSum = 0, oddSum = 0, oddCounter = 0, evenSum = 0, evenCounter = 0;
+    let commonSum = 0;
+    let oddSum = 0, oddCounter = 0,oddNumber="";
+    let evenSum = 0, evenCounter = 0,evenNumber="";
     let user = Number(prompt("Lütfen bitiş sayısı giriniz"));
 
     // Loop
@@ -411,17 +413,21 @@ let sumExamples = () => {
         if (i % 2 == 0) {
             evenCounter++;
             evenSum = evenSum + i;
+            evenNumber=evenNumber+" "+i
         } else {
             oddCounter++;
             oddSum += i;
+            oddNumber=oddNumber+" "+i
         }
         commonSum += i;
     } //end for 1 2 3 4 5
     console.log("Toplam: " + commonSum);
 
-    console.log("Tek sayısı: " + oddCounter);
+    console.log("Tek sayılar: " + oddNumber);
+    console.log("Tek sayı Adeti: " + oddCounter);
     console.log("Tek Toplam: " + oddSum);
 
+    console.log("Çift sayılar: " + evenNumber);
     console.log("Çift sayısı: " + evenCounter);
     console.log("Çift Toplam: " + evenSum);
 }
