@@ -380,9 +380,9 @@ let result = () => {
 // Örnek: 1<=user 1+2+3+...userdatası
 // Eğer Bu sayılardan 7 sayıyı varsa bunu toplayama dahil etmesin (continue)
 // Bu sayının en fazla 50'e kadar toplama yapabilir (break)
-// bu sayılardan çift olanların kaç tane ve toplamları nedir ?
-// bu sayılardan tek olanların kaç tane ve toplamları nedir ? 
-// secret-Key kullanıcı eğer 10 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
+// bu sayılardan çift olanların kaç tane, sayıların kendisi ve toplamları nedir ?
+// bu sayılardan tek olanların kaç tane, sayıların kendisi ve toplamları nedir ? 
+// secret-Key kullanıcı eğer 44 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
 // Dikkat: Bu algoritmayı Arrow Function ile yapalım.
 // (Clean code kuralları çercevesinde ) algoritma yapan program?
 let sumExamples = () => {
@@ -391,29 +391,39 @@ let sumExamples = () => {
 
     // Loop
     for (let i = 1; i <= user; i++) {
-        if (i === 10)
+        if (user == 44) {
+            console.log("secret-key sayısı sistemde çıkış yapıldı ");
             break;
+        }
+
+        if (i === 50){
+            console.log("50 sayısının üstünde toplama yapamıyorum");
+            break;
+        }
 
         if (i === 7)
+        {
+            console.log("7 sayısını toplamayacağım.");
             continue;
-
+        }
+            
         // tek çift
         if (i % 2 == 0) {
             evenCounter++;
-            evenSum=evenSum+i;
+            evenSum = evenSum + i;
         } else {
             oddCounter++;
-            oddSum+=i;
+            oddSum += i;
         }
-        commonSum+=i;
+        commonSum += i;
     } //end for 1 2 3 4 5
-    console.log("Toplam: "+commonSum);
+    console.log("Toplam: " + commonSum);
 
-    console.log("Tek sayısı: "+oddCounter);
-    console.log("Tek Toplam: "+oddSum);
-    
-    console.log("Çift sayısı: "+evenCounter);
-    console.log("Çift Toplam: "+evenSum);
+    console.log("Tek sayısı: " + oddCounter);
+    console.log("Tek Toplam: " + oddSum);
+
+    console.log("Çift sayısı: " + evenCounter);
+    console.log("Çift Toplam: " + evenSum);
 }
 sumExamples()
 
