@@ -10,7 +10,7 @@
 // Alert
 //alert("Alert Data");
 
-// // variable , typeof
+// variable , typeof
 // var data = 44;
 // console.log(typeof data+" => "+data);
 
@@ -23,22 +23,22 @@
 // data="JavaScript Öğreniyorum";
 // console.log(typeof data+" => "+data);
 
-// // naming convensition
+//  naming convensition
 // var science="JS tutorials";
 // var science44="JS tutorials";
 // var _science44="JS tutorials";
 // var $science44="JS tutorials";
 // var scienceData="JS tutorials";
 
-// //var 44scienceData="JS tutorials";
-// //var ~scienceData="JS tutorials";
+// var 44scienceData="JS tutorials";
+// var ~scienceData="JS tutorials";
 
-// // Whoisting 
+//  Whoisting 
 // deneme=55;
 // var deneme;
 // console.log(typeof deneme+" => "+deneme);
 
-// // Operator
+//  Operator
 // console.log(4+6);
 // console.log(4-6);
 // console.log(4*6);
@@ -83,7 +83,6 @@ Formül: (derece*9/5)+32
 // var result3=3*x+4*k;
 //console.log(result3)
 
-
 // örnek-4
 // operatör işlemleri: aşağıdaki örneği javascript ile yapalım
 // 4+3*2(3:3-1*6+9:1+(3:3));
@@ -93,7 +92,6 @@ Formül: (derece*9/5)+32
 // cast
 // Number(prompt("Lütfen derece Giriniz"));
 // String(prompt("Lütfen derece Giriniz"));
-
 
 // var=Global, 
 // var sayi1=44;
@@ -109,11 +107,11 @@ Formül: (derece*9/5)+32
 // console.log(sayi3);
 
 // undefined NaN isNaN infinity
-//undefined // tanımsız bir değişkene atanmış degerdir
+// undefined // tanımsız bir değişkene atanmış degerdir
 // let data4;
 // console.log(data4);
 
-//NaN 
+// NaN 
 // console.log("kelime"/4)
 
 //infinity
@@ -158,7 +156,7 @@ Formül: (derece*9/5)+32
 // number1=Number(number1);
 
 // isNaN => false=Sayı
-// // isNaN => true =Sayı değil
+//  isNaN => true =Sayı değil
 // console.log(isNaN(44)); 
 
 // //Bilimsel Göster
@@ -168,7 +166,7 @@ Formül: (derece*9/5)+32
 // let bilimsel2=1.4E+6;
 // console.log(bilimsel2);
 
-//Sayı Sistemleri
+// Sayı Sistemleri
 // let binary=0b010;
 // console.log(binary);
 
@@ -220,7 +218,9 @@ console.log(vocabulary.lastIndexOf("Java"));
 // S-10) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin? (subString())
 
 //////////////////////////////////////////////////////////////////
-// Fonkisyonlar
+// Function
+
+//////////////////////////////////////////////////////////////////
 // Conditional(if/Else)
 // Ternary
 // Switch Case 
