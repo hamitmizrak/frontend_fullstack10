@@ -220,37 +220,100 @@ Formül: (derece*9/5)+32
 //////////////////////////////////////////////////////////////////
 // Function
 // 1  parametresizReturnsuz
-function parametresizReturnsuz(){
-    console.log("parametresiz Returnsuz")
-}
-parametresizReturnsuz()
+// function parametresizReturnsuz(){
+//     console.log("parametresiz Returnsuz")
+// }
+// parametresizReturnsuz();
 
-// 2  parametreli Returnsuz
-function parametreliReturnsuz(surname){
-    console.log("parametreli Returnsuz "+ surname)
-}
-parametreliReturnsuz("Mızrak")
+// // 2  parametreli Returnsuz
+// function parametreliReturnsuz(surname){
+//     console.log("parametreli Returnsuz "+ surname)
+// }
+// parametreliReturnsuz("Mızrak");
 
-// 3  parametresiz Returnlu 
-function parametresizReturnlu(){
-    //console.log("parametresizReturnlu")
-    return "parametresiz Returnlu";
-}
-let data3=parametresizReturnlu();
-console.log(data3);
+// // 3  parametresiz Returnlu 
+// function parametresizReturnlu(){
+//     //console.log("parametresizReturnlu")
+//     return "parametresiz Returnlu";
+// }
+// let data3=parametresizReturnlu();
+// console.log(data3);
 
-// 4  parametreli Returnlu
-function parametreliReturnlu(number){
-    //console.log("parametresizReturnlu")
-    return "parametreli Returnlu "+number;
-}
-let data4=parametreliReturnlu(44);
-console.log(data4);
+// // 4  parametreli Returnlu
+// function parametreliReturnlu(number){
+//     //console.log("parametresizReturnlu")
+//     return "parametreli Returnlu "+number;
+// }
+// let data4=parametreliReturnlu(44);
+// console.log(data4);
 
 //////////////////////////////////////////////////////////////////
 // Conditional(if/Else)
+let data1 = function () {
+    const number = -10;
+    if (number > 0) {
+        console.log("pozitif");
+    } else {
+        console.log("negatif");
+    }
+}
+data1();
 // Ternary
-// Switch Case 
+
+let data2 = function () {
+    const number = -10;
+    let result = (number > 0) ? "pozitif" : "negatif";
+    console.log(result);
+}
+data2();
+
+// if else if else
+let data3 = function () {
+    let number = 555;
+    if (number == 1) {
+        console.log("1");
+    } else if (number == 2) {
+        console.log("2");
+    } else if (number == 3) {
+        console.log("3");
+    } else if (number == 4) {
+        console.log("4");
+    } else if (number == 5) {
+        console.log("5");
+    } else {
+        console.log("1<=x<=5 dışındadır");
+    }
+}
+data3();
+
+// Switch Case
+let data4 = function () {
+    let number = 555;
+    switch (number) {
+        case 1:
+            console.log("1");
+            break;
+        case 2:
+            console.log("2");
+            break;
+        case 3:
+            console.log("3");
+            break;
+        case 4:
+            console.log("4");
+            break;
+        case 5:
+            console.log("5");
+            break;
+
+        default:
+            console.log("1<=x<=5 dışındadır");
+            break;
+    }
+}
+data4();
+
+//////////////////////////////////////////////////////////////////
 // Loop
 // break return continue
 // try catch
