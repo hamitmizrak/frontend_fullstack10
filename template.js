@@ -181,24 +181,24 @@ Formül: (derece*9/5)+32
 
 /////////////////////////////////////////////////////////////////
 // Kelime // String
-const vocabulary="Veri Java işlemleri Java ";
-console.log(vocabulary.length);
-console.log(vocabulary.trim().length);
-console.log(vocabulary.toLowerCase());
-console.log(vocabulary.toUpperCase());
-console.log(vocabulary.startsWith("Java"));
-console.log(vocabulary.endsWith("asd"));
+// const vocabulary="Veri Java işlemleri Java ";
+// console.log(vocabulary.length);
+// console.log(vocabulary.trim().length);
+// console.log(vocabulary.toLowerCase());
+// console.log(vocabulary.toUpperCase());
+// console.log(vocabulary.startsWith("Java"));
+// console.log(vocabulary.endsWith("asd"));
 
-console.log(vocabulary.concat("sona ekle").concat(" data"));
-console.log(vocabulary.replace(vocabulary,"Eski data"));
+// console.log(vocabulary.concat("sona ekle").concat(" data"));
+// console.log(vocabulary.replace(vocabulary,"Eski data"));
 
-console.log(vocabulary.substring(1));
-console.log(vocabulary.substring(0,3));
+// console.log(vocabulary.substring(1));
+// console.log(vocabulary.substring(0,3));
 
-console.log(vocabulary.charAt(0));
+// console.log(vocabulary.charAt(0));
 
-console.log(vocabulary.indexOf("Java"));
-console.log(vocabulary.lastIndexOf("Java"));
+// console.log(vocabulary.indexOf("Java"));
+// console.log(vocabulary.lastIndexOf("Java"));
 
 /////////////////////////////////////////////////////////////////
 // ÖDEV NOT:5 adımı beraber yapalım
@@ -219,6 +219,33 @@ console.log(vocabulary.lastIndexOf("Java"));
 
 //////////////////////////////////////////////////////////////////
 // Function
+// 1  parametresizReturnsuz
+function parametresizReturnsuz(){
+    console.log("parametresiz Returnsuz")
+}
+parametresizReturnsuz()
+
+// 2  parametreli Returnsuz
+function parametreliReturnsuz(surname){
+    console.log("parametreli Returnsuz "+ surname)
+}
+parametreliReturnsuz("Mızrak")
+
+// 3  parametresiz Returnlu 
+function parametresizReturnlu(){
+    //console.log("parametresizReturnlu")
+    return "parametresiz Returnlu";
+}
+let data3=parametresizReturnlu();
+console.log(data3);
+
+// 4  parametreli Returnlu
+function parametreliReturnlu(number){
+    //console.log("parametresizReturnlu")
+    return "parametreli Returnlu "+number;
+}
+let data4=parametreliReturnlu(44);
+console.log(data4);
 
 //////////////////////////////////////////////////////////////////
 // Conditional(if/Else)
