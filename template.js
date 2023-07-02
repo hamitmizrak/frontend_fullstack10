@@ -386,11 +386,43 @@ let result=()=>{
 // Dikkat: Bu algoritmayı Arrow Function ile yapalım.
 // (Clean code kuralları çercevesinde ) algoritma yapan program?
 
+
+///////////////////////////////////////////////////////////////////////////////////data1
+//Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
+// -5.9 sayıyının aşağıdaki işlemleri yaptıralım ?
+// 1-mutlak değeri alsın 5.9
+// 2-yuvarlama yapsın  6.0
+// 3-karesini alsın 36.00
+// 4-karekök alsın 6.0
+// 5-yuvarlama yapsın 6.0
+// 6-)çıkan sonucu 5 bölsün 6/5=1
+// 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
+// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin 
+
+// Örnek-5 : kullanıcı tarafından girilen bir sayıyı negatif mi pozitif mi olduğu ekran yazdıran algoritma ?
+//NOT: cast kullalım ?
+
+// Örnek-6 : kullanıcı tarafından password ve repassword alalım sonrasında bu iki değeri karşılaştırma yapalım
+//eğer aynı girilirse aynı veri yoksa birbirine uymadı yazan algoritma yapalım
+
+
+// ÖDEV 
+// kullanıcıdan aldığımız isim soyisim (boşluk var)
+// ilk karakter göstersin sonraki kelimeleri masking (maskeleme yapsın)
+// eğer kullanıcı isim ve soyisimi ilk karakteri küçük girmişse büyük olsun mutlaka
+// Hamit Mızrak
+// H**** MIZ***
+// ipucu: charAt, substring, indexOf, döngü, karar mekanizma
+
+
 //////////////////////////////////////////////////////////////////
 // try catch
 // error handling
 // debug nasıl atılır ?
 //////////////////////////////////////////////////////////////////
+
 // Diziler
 // Objectler
 // DOM
+// event
+// jquery
