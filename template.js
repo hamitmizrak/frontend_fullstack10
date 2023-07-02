@@ -321,7 +321,7 @@ let data5 = function () {
         document.writeln(i + " ")
     }
 }
-data5();
+//data5();
 
 // while
 let data6 = function () {
@@ -332,7 +332,7 @@ let data6 = function () {
         i++;
     }
 }
-data6();
+//data6();
 
 // do-while
 let data7 = function () {
@@ -344,7 +344,7 @@ let data7 = function () {
     }
     while (i <= 10);
 }
-data7();
+//data7();
 
 //////////////////////////////////////////////////////////////////
 // Kullanıcı tarafından girilen bir sayının negatif mi, pozitif mi ? bunu yazan JS code yazınız.
@@ -353,21 +353,44 @@ data7();
 // Kullanıcı tarafından girilen bir sayının tek mi, çift mi olduğunu yazan JS code yazınız.
 // (Dikkat:anonymous function ve ternary ile yazınız)
 
-// Şimdiki zamanın saatine göre hesaplama yapan switch-case ile  JS code yazınız.
-// (Dikkat: arrow function ile yazınız) Zaman için new Date().getHours() ile alabilirsiniz
+let result=()=>{
+    let userData=Number(prompt("Lütfen bir sayı giriniz"));
+    if(userData%2==0){
+        console.log("Çift sayıdır"); 
+    }else{
+        console.log("Tek sayıdır"); 
+    }
+}
+//result()
 
 // Kullanıcıdan alınan sayıya göre Haftanın günlerini switch-case ile JS code yazınız?
-// Örneğin: kullanıcı 1 girdi: 1=pazartesi yazacak
-
+// Örneğin: kullanıcı 1 girdi: 1=pazartesi yazacak.
 
 //////////////////////////////////////////////////////////////////
-// break return continue
+// break: döngünün çalışmasına izin verme
+// return: metotun çalışmasına izin verme
+// continue: sadece bir seferlik o şartta çalışma
+
+// return  : metotun çalışmasını durdurur
+// break   : döngünün çalışmasını durdurur
+// continue: sadece 1 kereye mahsus durur sonra devam eder.
+
+// SORU 1<=userData<=50 
+// 1 ile Kullanıcı tarafından alınan bitiş sayısına kadar toplama yapan Algoritma örneği 
+// Örnek: 1<=user 1+2+3+...userdatası
+// Eğer Bu sayılardan 7 sayıyı varsa bunu toplayama dahil etmesin (continue)
+// Bu sayının en fazla 50'e kadar toplama yapabilir (break)
+// bu sayılardan çift olanların kaç tane ve toplamları nedir ?
+// bu sayılardan tek olanların kaç tane ve toplamları nedir ? 
+// secret-Key kullanıcı eğer 44 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
+// Dikkat: Bu algoritmayı Arrow Function ile yapalım.
+// (Clean code kuralları çercevesinde ) algoritma yapan program?
+
+//////////////////////////////////////////////////////////////////
 // try catch
 // error handling
-// debugger
-
+// debug nasıl atılır ?
 //////////////////////////////////////////////////////////////////
-// Callback function
-// promise
-// Asyn/await
-
+// Diziler
+// Objectler
+// DOM
