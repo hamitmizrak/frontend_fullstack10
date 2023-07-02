@@ -387,8 +387,8 @@ let result = () => {
 // (Clean code kuralları çercevesinde ) algoritma yapan program?
 let sumExamples = () => {
     let commonSum = 0;
-    let oddSum = 0, oddCounter = 0,oddNumber="";
-    let evenSum = 0, evenCounter = 0,evenNumber="";
+    let oddSum = 0, oddCounter = 0, oddNumber = "";
+    let evenSum = 0, evenCounter = 0, evenNumber = "";
     let user = Number(prompt("Lütfen bitiş sayısı giriniz"));
 
     // Loop
@@ -398,26 +398,25 @@ let sumExamples = () => {
             break;
         }
 
-        if (i === 50){
+        if (i === 50) {
             console.log("50 sayısının üstünde toplama yapamıyorum");
             break;
         }
 
-        if (i === 7)
-        {
+        if (i === 7) {
             console.log("7 sayısını toplamayacağım.");
             continue;
         }
-            
+
         // tek çift
         if (i % 2 == 0) {
             evenCounter++;
             evenSum = evenSum + i;
-            evenNumber=evenNumber+" "+i
+            evenNumber = evenNumber + " " + i
         } else {
             oddCounter++;
             oddSum += i;
-            oddNumber=oddNumber+" "+i
+            oddNumber = oddNumber + " " + i
         }
         commonSum += i;
     } //end for 1 2 3 4 5
