@@ -257,7 +257,7 @@ let data1 = function () {
         console.log("negatif");
     }
 }
-data1();
+//data1();
 // Ternary
 
 let data2 = function () {
@@ -265,7 +265,7 @@ let data2 = function () {
     let result = (number > 0) ? "pozitif" : "negatif";
     console.log(result);
 }
-data2();
+//data2();
 
 // if else if else
 let data3 = function () {
@@ -284,7 +284,7 @@ let data3 = function () {
         console.log("1<=x<=5 dışındadır");
     }
 }
-data3();
+//data3();
 
 // Switch Case
 let data4 = function () {
@@ -311,11 +311,45 @@ let data4 = function () {
             break;
     }
 }
-data4();
+//data4();
 
 //////////////////////////////////////////////////////////////////
 // Loop
+// for
+let data5 = function () {
+    for (let i = 1; i <= 10; i++) {
+        document.writeln(i + " ")
+    }
+}
+data5();
+
+// while
+let data6 = function () {
+    document.writeln("<br/>")
+    let i = 1;
+    while (i <= 10) {
+        document.writeln(i + " ")
+        i++;
+    }
+}
+data6();
+
+// do-while
+let data7 = function () {
+    document.writeln("<br/>")
+    let i = 1;
+    do {
+        document.writeln(i + " ")
+        i++;
+    }
+    while (i <= 10);
+}
+data7();
+
 // break return continue
+
+//////////////////////////////////////////////////////////////////
+
 // try catch
 // errorn handling
 // debugger
