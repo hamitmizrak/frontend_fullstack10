@@ -433,7 +433,7 @@ let sumExamples = () => {
 //sumExamples()
 
 ///////////////////////////////////////////////////////////////////////////////////data1
-//Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
+// Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
 // -5.9 sayıyının aşağıdaki işlemleri yaptıralım ?
 // 1-mutlak değeri alsın 5.9
 // 2-yuvarlama yapsın  6.0
@@ -458,11 +458,9 @@ let sumExamples = () => {
 // H**** MIZ***
 // ipucu: charAt, substring, indexOf, döngü, karar mekanizma
 
-
 //////////////////////////////////////////////////////////////////
 // try catch
 let tryCatchTutorials = () => {
-
     try {
         alertx("deneme");
     } catch (error) {
@@ -474,13 +472,81 @@ let tryCatchTutorials = () => {
     }
     console.log("son satır");
 }
-tryCatchTutorials();
+//tryCatchTutorials();
 
 // error handling
 // debug nasıl atılır ?
 //////////////////////////////////////////////////////////////////
 // Diziler
-// Objectler
+let arrayTutorials = () => {
+    let dizi = [9, 3, 1, 6, 2];
+    // dizi[0]=1;
+    // dizi[1]=2;
+    // dizi[2]=3;
+    //console.log(dizi);
+    //console.log(dizi[1]);
+    // console.log(dizi[0]);
+    // console.log(dizi[4]);
+    // console.log(dizi[dizi.length-1]);
+
+    console.log(dizi);
+    console.log(typeof dizi);
+    dizi.push(99); //sona ekleme
+    dizi.unshift(11);//başa ekleme
+
+    dizi.pop(); //sona çıkar
+    dizi.shift(); //baştan çıkar
+    dizi.sort();
+    dizi.reverse();
+    console.log(dizi);
+
+    //dongüler
+    //iterative
+    for (let i = 0; i < dizi.length; i++) {
+        document.writeln(dizi[i] + " ");
+    }
+    // for in
+    document.writeln("<br/>");
+    for (let temp in dizi) {
+        document.writeln(temp);
+    }
+
+    // for of
+    document.writeln("<br/>");
+    for (let temp of dizi) {
+        document.writeln(temp);
+    }
+
+    // for in off
+    document.writeln("<br/>");
+    for (let temp in dizi) {
+        document.writeln(temp+" => "+dizi[temp]+"<br/>");
+    }
+
+    // forEach
+    document.writeln("<br/>");
+    dizi.forEach(function(value,index,array){
+        document.writeln(index+" => "+value+"<br/>");
+    });
+
+    // forEach interpolation
+    document.writeln("<br/>");
+    dizi.forEach(function(value,index,array){
+        document.writeln(`${index} => ${value} <br/>`);
+    })
+
+}
+arrayTutorials();
+
+// Ödev: rastgele 5 tane sayıyı diziye atan algoritma yazınız ?
+// let numbers = [];
+// for (var i = 0; i < 5; i++) {
+//   numbers[i] = Math.floor(Math.random() * 100);
+// }
+// console.log(numbers);
+
+//////////////////////////////////////////////////////////////////
+// Object
 // DOM
 // event
 // jquery
