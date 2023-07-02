@@ -346,10 +346,22 @@ let data7 = function () {
 }
 data7();
 
-// break return continue
+//////////////////////////////////////////////////////////////////
+// Kullanıcı tarafından girilen bir sayının negatif mi, pozitif mi ? bunu yazan JS code yazınız.
+// (Dikkat: normal  function ile yazınız)
+
+// Kullanıcı tarafından girilen bir sayının tek mi, çift mi olduğunu yazan JS code yazınız.
+// (Dikkat:anonymous function ve ternary ile yazınız)
+
+// Şimdiki zamanın saatine göre hesaplama yapan switch-case ile  JS code yazınız.
+// (Dikkat: arrow function ile yazınız) Zaman için new Date().getHours() ile alabilirsiniz
+
+// Kullanıcıdan alınan sayıya göre Haftanın günlerini switch-case ile JS code yazınız?
+// Örneğin: kullanıcı 1 girdi: 1=pazartesi yazacak
+
 
 //////////////////////////////////////////////////////////////////
-
+// break return continue
 // try catch
 // errorn handling
 // debugger
