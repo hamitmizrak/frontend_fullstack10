@@ -353,12 +353,12 @@ let data7 = function () {
 // Kullanıcı tarafından girilen bir sayının tek mi, çift mi olduğunu yazan JS code yazınız.
 // (Dikkat:anonymous function ve ternary ile yazınız)
 
-let result=()=>{
-    let userData=Number(prompt("Lütfen bir sayı giriniz"));
-    if(userData%2==0){
-        console.log("Çift sayıdır"); 
-    }else{
-        console.log("Tek sayıdır"); 
+let result = () => {
+    let userData = Number(prompt("Lütfen bir sayı giriniz"));
+    if (userData % 2 == 0) {
+        console.log("Çift sayıdır");
+    } else {
+        console.log("Tek sayıdır");
     }
 }
 //result()
@@ -382,10 +382,40 @@ let result=()=>{
 // Bu sayının en fazla 50'e kadar toplama yapabilir (break)
 // bu sayılardan çift olanların kaç tane ve toplamları nedir ?
 // bu sayılardan tek olanların kaç tane ve toplamları nedir ? 
-// secret-Key kullanıcı eğer 44 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
+// secret-Key kullanıcı eğer 10 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
 // Dikkat: Bu algoritmayı Arrow Function ile yapalım.
 // (Clean code kuralları çercevesinde ) algoritma yapan program?
+let sumExamples = () => {
+    let commonSum = 0, oddSum = 0, oddCounter = 0, evenSum = 0, evenCounter = 0;
+    let user = Number(prompt("Lütfen bitiş sayısı giriniz"));
 
+    // Loop
+    for (let i = 1; i <= user; i++) {
+        if (i === 10)
+            break;
+
+        if (i === 7)
+            continue;
+
+        // tek çift
+        if (i % 2 == 0) {
+            evenCounter++;
+            evenSum=evenSum+i;
+        } else {
+            oddCounter++;
+            oddSum+=i;
+        }
+        commonSum+=i;
+    } //end for 1 2 3 4 5
+    console.log("Toplam: "+commonSum);
+
+    console.log("Tek sayısı: "+oddCounter);
+    console.log("Tek Toplam: "+oddSum);
+    
+    console.log("Çift sayısı: "+evenCounter);
+    console.log("Çift Toplam: "+evenSum);
+}
+sumExamples()
 
 ///////////////////////////////////////////////////////////////////////////////////data1
 //Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
@@ -397,16 +427,15 @@ let result=()=>{
 // 5-yuvarlama yapsın 6.0
 // 6-)çıkan sonucu 5 bölsün 6/5=1
 // 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
-// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin 
+// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin
 
 // Örnek-5 : kullanıcı tarafından girilen bir sayıyı negatif mi pozitif mi olduğu ekran yazdıran algoritma ?
-//NOT: cast kullalım ?
+// NOT: cast kullalım ?
 
 // Örnek-6 : kullanıcı tarafından password ve repassword alalım sonrasında bu iki değeri karşılaştırma yapalım
-//eğer aynı girilirse aynı veri yoksa birbirine uymadı yazan algoritma yapalım
+// eğer aynı girilirse aynı veri yoksa birbirine uymadı yazan algoritma yapalım
 
-
-// ÖDEV 
+// Örnek-7:
 // kullanıcıdan aldığımız isim soyisim (boşluk var)
 // ilk karakter göstersin sonraki kelimeleri masking (maskeleme yapsın)
 // eğer kullanıcı isim ve soyisimi ilk karakteri küçük girmişse büyük olsun mutlaka
