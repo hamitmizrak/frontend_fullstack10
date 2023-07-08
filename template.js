@@ -674,7 +674,6 @@ let obj3 = () => {
 // Bir fonksiyona başka bir obje bağlamak.
 // this.adi yoktur varmış gibi devam ediyorum.
 // call,apply
-
 // parametresiz Constructor(ister anonymous ister arrow Function yazabilirsiniz)
 let notParameterCallApplyBind = () => { // function(){}
 
@@ -718,7 +717,7 @@ let parameterCallApplyBind = () => {
     functionOtherObject.call(objeData,"44");
     // apply
     functionOtherObject.apply(objeData,["44"]);
-    
+
     // bind: değişkene ver değişken objesini kullanb
     let deneme = functionOtherObject.bind(objeData,"44");
     deneme();
@@ -726,6 +725,30 @@ let parameterCallApplyBind = () => {
 parameterCallApplyBind();
 
 //////////////////////////////////////////////////////////////////
-// DOM
+// Araştırma 
+// DRY
+// KISS
+// YAGNI
+// DUMMY CODE
+// CLEAN CODE
+// SPAGETTI CODES
+// S.O.L.I.D
+
+//////////////////////////////////////////////////////////////////
+// setInterval
+setInterval(function(){
+    console.log("merhabalar");
+},3000)
+
+// Monad
+// callbackfunction
+// promise
+
+// D.O.M
 // event
 // jquery
+
+// Sıfırdan project yaz(Frontend ile)
+// Git/ Linux learning
+
+// SQL
