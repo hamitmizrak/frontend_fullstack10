@@ -735,9 +735,14 @@ parameterCallApplyBind();
 // S.O.L.I.D
 
 //////////////////////////////////////////////////////////////////
-// setInterval
+// setInterval(Anonymous Function)
 setInterval(function(){
-    console.log("merhabalar");
+    console.log("Anonymous Function");
+},2000)
+
+// setInterval(Arrow Function)
+setInterval(()=>{
+    console.log("Arrow Function");
 },3000)
 
 // Monad
