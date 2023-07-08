@@ -582,6 +582,8 @@ let tutorialArray = () => {
     }).forEach(function (value, index, array) {
         document.writeln(` ${index} => ${value} <br/>`);
     });
+
+    console.log(dizi);
 }
 tutorialArray()
 
