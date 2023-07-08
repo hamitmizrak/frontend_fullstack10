@@ -757,6 +757,7 @@ function ikinci() {
 
 //////////////////////////////////////////////////////////////////
 // callbackfunction(call back hell)
+// ES6
 let ucuncu = (number) => {
     //number = Math.pow(number, 2);
     number = number ** 2;
@@ -771,19 +772,25 @@ let dorduncu = (callbackFnc) => {
 
 //////////////////////////////////////////////////////////////////
 // promise
+// ES7
 let promiseTutorials = () => {
-
     let prom = new Promise((resolve, reject) => {
+        let status = 200;
+        if (status === 200) {
+            // resolve: olumlu dönerse => resolve then çalışır
+            resolve("olumlu sonuc");
+        } else {
+            reject("olumsuz sonuc");
+            // reject : olumsuz dönerse => reject dönerse catch çalışır
+        }
+    })
         // resolve: olumlu dönerse => resolve then çalışır
-        resolve("olumlu sonuc");
-
-        //reject("olumsuz sonuc");
+        .then(// istediğimiz kadar then yazabiliriz.
+            () => {
+                console.log("olumlu resolve");
+            })
         // reject : olumsuz dönerse => reject dönerse catch çalışır
-        //new Promise eğer 
-    }).then(
-        () => {
-            console.log("olumlu resolve");
-        }).catch( // sadece 1 tane catch vardır
+        .catch( // sadece 1 tane catch vardır
             (err) => { console.error(err); }
         );
     console.log(prom);
@@ -793,6 +800,8 @@ promiseTutorials()
 
 //////////////////////////////////////////////////////////////////
 // asyn/await
+// ES8
+//////////////////////////////////////////////////////////////////
 
 // D.O.M
 // event
