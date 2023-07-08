@@ -564,6 +564,7 @@ let tutorialArray = () => {
 
     // Filter
     // predicate: (value: T, index: number, array: T[]
+    // Not: var olan dizi değerini değiştirmiyor
     let newFilter = dizi.filter(function (value, index) {
         return value % 2 == 0;
     });
@@ -574,16 +575,28 @@ let tutorialArray = () => {
     }).forEach(function (value, index, array) {
         document.writeln(` ${index} => ${value} <br/>`);
     });
+    //console.log(dizi);
 
     // Map
+    // Not: var olan dizi değerini değiştirmiyor
     // callbackfn: (value: T, index: number, array: T[]
     dizi.map(function (value, index, array) {
         return value += 1000;
     }).forEach(function (value, index, array) {
         document.writeln(` ${index} => ${value} <br/>`);
     });
+    //console.log(dizi);
 
-    console.log(dizi);
+    // Fill
+    // value: T, start?: number, end?: number
+    // eğer başlangıç veya bitiş vermezseniz 0 indisten itibareb verilen değeri doldurur.
+    dizi.fill("44").forEach(function (value, index, array) {
+        document.writeln(` ${index} => ${value} <br/>`);
+    });
+    document.writeln("<br/>")
+    dizi.fill("23",0,2).forEach(function (value, index, array) {
+        document.writeln(` ${index} => ${value} <br/>`);
+    });
 }
 tutorialArray()
 
