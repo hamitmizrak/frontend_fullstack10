@@ -638,8 +638,39 @@ let obj = () => {
         console.log(`${temp} => ${student[temp]}`);
     }
 }
+//obj();
 
-obj()
+// object constructor
+let obj2 = () => {
+    let Student=function(name,surname){
+        this.name = name;
+        this.surname = surname;
+        console.log(this);
+    }
+    let result=new Student("Hamit","Mızrak");
+}
+//obj2();
+
+// stringify,parse
+
+let obj3 = () => {
+   let obje={
+    "adi":"Hamit",
+    "soyadi":"Mızrak",
+   };
+   console.log(obje);
+
+   // Obje => String'e çevir
+   let value=JSON.stringify(obje);
+   console.log(value);
+
+   // String => Obje'e çevir
+   let parse=JSON.parse(value);
+   let name=parse.adi;
+   console.log(name);
+}
+obj3();
+// call
 
 //////////////////////////////////////////////////////////////////
 // DOM
