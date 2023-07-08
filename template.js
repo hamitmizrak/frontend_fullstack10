@@ -859,6 +859,7 @@ let promiseFunctionComputer = () => {
         .catch((err) => {
             console.error(err);
         });
+    // ComputerName 
     listComputerName();
 }
 promiseFunctionComputer();
