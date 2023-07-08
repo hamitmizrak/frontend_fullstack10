@@ -640,36 +640,90 @@ let obj = () => {
 }
 //obj();
 
+// constructorda this önemli bir keyword(kalıtımlama)
 // object constructor
 let obj2 = () => {
-    let Student=function(name,surname){
+    let Student = function (name, surname) {
         this.name = name;
         this.surname = surname;
         console.log(this);
     }
-    let result=new Student("Hamit","Mızrak");
+    let result = new Student("Hamit", "Mızrak");
 }
 //obj2();
 
 // stringify,parse
 let obj3 = () => {
-   let obje={
-    "adi":"Hamit",
-    "soyadi":"Mızrak",
-   };
-   console.log(obje);
+    let obje = {
+        "adi": "Hamit",
+        "soyadi": "Mızrak",
+    };
+    console.log(obje);
 
-   // Obje => String'e çevir
-   let value=JSON.stringify(obje);
-   console.log(value);
+    // Obje => String'e çevir
+    let value = JSON.stringify(obje);
+    console.log(value);
 
-   // String => Obje'e çevir
-   let parse=JSON.parse(value);
-   let name=parse.adi;
-   console.log(name);
+    // String => Obje'e çevir
+    let parse = JSON.parse(value);
+    let name = parse.adi;
+    console.log(name);
 }
-obj3();
-// call
+//obj3();
+
+// Bir fonksiyona başka bir obje bağlamak.
+// this.adi yoktur varmış gibi devam ediyorum.
+// call,apply
+
+// parametresiz Constructor(ister anonymous ister arrow Function yazabilirsiniz)
+let notParameterCallApplyBind = () => { // function(){}
+
+    // Function
+    let functionOtherObject = function () {
+        document.writeln(`Parametresiz function: ${this.adi}<br/>`)
+    }
+
+    // Obje
+    let objeData = {
+        "adi": "HamitM",
+    };
+
+    //Function call,apply,bind (parametresiz)
+    // call
+    functionOtherObject.call(objeData);
+    // apply
+    functionOtherObject.apply(objeData);
+    // bind: değişkene ver değişken objesini kullanb
+    let deneme = functionOtherObject.bind(objeData);
+    deneme();
+}
+notParameterCallApplyBind();
+
+
+// parametreli Constructor(ister anonymous ister arrow Function yazabilirsiniz)
+let parameterCallApplyBind = () => {
+
+    // Function
+    let functionOtherObject = function (number1) {
+        document.writeln(`Parametreli function: ${this.adi} Number1=> ${number1} <br/>`)
+    }
+
+    // Obje
+    let objeData = {
+        "adi": "HamitM",
+    };
+
+    //Function call,apply,bind (parametreli)
+    // call
+    functionOtherObject.call(objeData,"44");
+    // apply
+    functionOtherObject.apply(objeData,["44"]);
+    
+    // bind: değişkene ver değişken objesini kullanb
+    let deneme = functionOtherObject.bind(objeData,"44");
+    deneme();
+}
+parameterCallApplyBind();
 
 //////////////////////////////////////////////////////////////////
 // DOM
