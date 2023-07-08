@@ -594,18 +594,36 @@ let tutorialArray = () => {
         document.writeln(` ${index} => ${value} <br/>`);
     });
     document.writeln("<br/>")
-    dizi.fill("23",0,2).forEach(function (value, index, array) {
+    dizi.fill("23", 0, 2).forEach(function (value, index, array) {
         document.writeln(` ${index} => ${value} <br/>`);
     });
 }
-tutorialArray()
-
-
-
-
+//tutorialArray()
 
 //////////////////////////////////////////////////////////////////
 // Object
+let obj = () => {
+    let student = {
+        "name": "Hamit",
+        "surname": "Mızrak",
+        "number": 44,
+        "isLogin": true,
+        "softwareTech": ["Html5", "Css3", "Js"],
+        "fullName": function () {
+            console.log(`${this["name"]} ${this.surname}`);
+        },
+        "java":{
+            name:"Java",
+            year:5
+        }
+    };
+    console.log(student);
+    console.log(student.name.toUpperCase());
+    console.log(student.java.year);
+    student.fullName();
+}
+
+obj()
 
 //////////////////////////////////////////////////////////////////
 // DOM
