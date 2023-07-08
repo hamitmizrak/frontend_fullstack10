@@ -795,8 +795,36 @@ let promiseTutorials = () => {
         );
     console.log(prom);
 }
-promiseTutorials()
+//promiseTutorials()
+//////////////////////////////////////////////////////////////////
+let callBackFunctionComputer = () => {
+    // api gelen data
+    const computerObject =
+        [
+            { computerName: "computer1", price: 100 },
+            { computerName: "computer2", price: 200 },
+            { computerName: "computer3", price: 300 },
+        ];
 
+    // data içindeki computerName göster
+    const listComputerName = () => {
+        computerObject.map((temp) => {
+            console.log(`${temp.computerName}`);
+        })
+    }
+
+    // data içindeki trade göster
+    const listComputerPrice = (price, calbackFnc) => {
+        computerObject.push(price);
+        calbackFnc();
+    };
+
+    // objeye yeni bir data ekle callbackfunction göster
+    listComputerPrice({ computerName: "computer1", price: 100 }, listComputerName)
+}
+callBackFunctionComputer();
+
+let promiseFunctionComputer = () => { }
 
 //////////////////////////////////////////////////////////////////
 // asyn/await
