@@ -801,9 +801,9 @@ let callBackFunctionComputer = () => {
     // api gelen data
     const computerObject =
         [
-            { computerName: "computer1", price: 100 },
-            { computerName: "computer2", price: 200 },
-            { computerName: "computer3", price: 300 },
+            { computerName: "call back computer1", price: 100 },
+            { computerName: "call back computer2", price: 200 },
+            { computerName: "call back computer3", price: 300 },
         ];
 
     // data içindeki computerName göster
@@ -820,11 +820,48 @@ let callBackFunctionComputer = () => {
     };
 
     // objeye yeni bir data ekle callbackfunction göster
-    listComputerPrice({ computerName: "computer1", price: 100 }, listComputerName)
+    listComputerPrice({ computerName: "call back computer4", price: 400 }, listComputerName);
 }
 callBackFunctionComputer();
 
-let promiseFunctionComputer = () => { }
+console.log("");
+
+// Promise
+let promiseFunctionComputer = () => {
+    // api gelen data
+    const computerObject =
+        [
+            { computerName: "promise computer1", price: 100 },
+            { computerName: "promise computer2", price: 200 },
+            { computerName: "promise computer3", price: 300 },
+        ];
+
+    // data içindeki computerName göster
+    const listComputerName = () => {
+        computerObject.map((temp) => {
+            console.log(`${temp.computerName}`);
+        })
+    };
+
+    // data içindeki trade göster
+    const listComputerPrice = (price) => {
+        const promiseReturnData = new Promise((resolve, reject) => {
+            computerObject.push(price);
+        })
+        return promiseReturnData;
+    };
+
+    // objeye yeni bir data ekle callbackfunction göster
+    listComputerPrice({ computerName: "promise computer4", price: 400 })
+        .then(() => {
+            console.log("olumlu");
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+    listComputerName();
+}
+promiseFunctionComputer();
 
 //////////////////////////////////////////////////////////////////
 // asyn/await
