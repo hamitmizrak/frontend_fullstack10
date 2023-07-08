@@ -520,23 +520,22 @@ let arrayTutorials = () => {
     // for in off
     document.writeln("<br/>");
     for (let temp in dizi) {
-        document.writeln(temp+" => "+dizi[temp]+"<br/>");
+        document.writeln(temp + " => " + dizi[temp] + "<br/>");
     }
 
     // forEach
     document.writeln("<br/>");
-    dizi.forEach(function(value,index,array){
-        document.writeln(index+" => "+value+"<br/>");
+    dizi.forEach(function (value, index, array) {
+        document.writeln(index + " => " + value + "<br/>");
     });
 
     // forEach interpolation
     document.writeln("<br/>");
-    dizi.forEach(function(value,index,array){
+    dizi.forEach(function (value, index, array) {
         document.writeln(`${index} => ${value} <br/>`);
-    })
-
+    });
 }
-arrayTutorials();
+//arrayTutorials();
 
 // Ödev: rastgele 5 tane sayıyı diziye atan algoritma yazınız ?
 // let numbers = [];
@@ -545,11 +544,55 @@ arrayTutorials();
 // }
 // console.log(numbers);
 
-// Map
-// Filter
+
+//////////////////////////////////////////////////////////////////
+
+let arr = () => {
+    let tempArray = [2, 6, 5, 3, 1];
+    return tempArray;
+}
+
+let tutorialArray = () => {
+    let dizi = arr();
+    //console.log(dizi);
+
+    // ForEach
+    // callbackfn: (value: T, index: number, array: T[]
+    dizi.forEach(function (value, index, array) {
+        document.writeln(` ${index} => ${value} <br/>`);
+    });
+
+    // Filter
+    // predicate: (value: T, index: number, array: T[]
+    let newFilter = dizi.filter(function (value, index) {
+        return value % 2 == 0;
+    });
+    document.writeln(newFilter + "<br/>");
+
+    dizi.filter(function (value, index) {
+        return value % 2 == 0;
+    }).forEach(function (value, index, array) {
+        document.writeln(` ${index} => ${value} <br/>`);
+    });
+
+    // Map
+    // callbackfn: (value: T, index: number, array: T[]
+    dizi.map(function (value, index, array) {
+        return value += 1000;
+    }).forEach(function (value, index, array) {
+        document.writeln(` ${index} => ${value} <br/>`);
+    });
+}
+tutorialArray()
+
+
+
+
 
 //////////////////////////////////////////////////////////////////
 // Object
+
+//////////////////////////////////////////////////////////////////
 // DOM
 // event
 // jquery
