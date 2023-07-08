@@ -612,15 +612,31 @@ let obj = () => {
         "fullName": function () {
             console.log(`${this["name"]} ${this.surname}`);
         },
-        "java":{
-            name:"Java",
-            year:5
+        "java": {
+            name: "Java",
+            year: 5
         }
     };
+    // variable
     console.log(student);
     console.log(student.name.toUpperCase());
     console.log(student.java.year);
+
+    // nested Object
+    console.log(student["java"]["year"]);
+
+    // Function calling
     student.fullName();
+
+    // object literal
+    student.city = "Malatya";
+    console.log(student.city);
+
+    console.log("*********");
+    // bütün objeyi ekrandan göster
+    for (let temp in student) {
+        console.log(`${temp} => ${student[temp]}`);
+    }
 }
 
 obj()
