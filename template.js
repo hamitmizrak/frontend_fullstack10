@@ -652,7 +652,6 @@ let obj2 = () => {
 //obj2();
 
 // stringify,parse
-
 let obj3 = () => {
    let obje={
     "adi":"Hamit",
