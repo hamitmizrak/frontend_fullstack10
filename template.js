@@ -696,7 +696,7 @@ let notParameterCallApplyBind = () => { // function(){}
     let deneme = functionOtherObject.bind(objeData);
     deneme();
 }
-notParameterCallApplyBind();
+//notParameterCallApplyBind();
 
 
 // parametreli Constructor(ister anonymous ister arrow Function yazabilirsiniz)
@@ -714,15 +714,15 @@ let parameterCallApplyBind = () => {
 
     //Function call,apply,bind (parametreli)
     // call
-    functionOtherObject.call(objeData,"44");
+    functionOtherObject.call(objeData, "44");
     // apply
-    functionOtherObject.apply(objeData,["44"]);
+    functionOtherObject.apply(objeData, ["44"]);
 
     // bind: değişkene ver değişken objesini kullanb
-    let deneme = functionOtherObject.bind(objeData,"44");
+    let deneme = functionOtherObject.bind(objeData, "44");
     deneme();
 }
-parameterCallApplyBind();
+//parameterCallApplyBind();
 
 //////////////////////////////////////////////////////////////////
 // Araştırma 
@@ -735,19 +735,64 @@ parameterCallApplyBind();
 // S.O.L.I.D
 
 //////////////////////////////////////////////////////////////////
-// setInterval(Anonymous Function)
-setInterval(function(){
-    console.log("Anonymous Function");
-},2000)
+// // setInterval(Anonymous Function)
+// setInterval(function(){
+//     console.log("Anonymous Function");
+// },2000)
 
-// setInterval(Arrow Function)
-setInterval(()=>{
-    console.log("Arrow Function");
-},3000)
+// // setInterval(Arrow Function)
+// setInterval(()=>{
+//     console.log("Arrow Function");
+// },3000);
 
+//////////////////////////////////////////////////////////////////
 // Monad
-// callbackfunction
+function birinci() {
+    return 16;
+}
+function ikinci() {
+    console.log(Math.sqrt(birinci()));
+}
+//ikinci();
+
+//////////////////////////////////////////////////////////////////
+// callbackfunction(call back hell)
+let ucuncu = (number) => {
+    //number = Math.pow(number, 2);
+    number = number ** 2;
+    return number;
+}
+
+let dorduncu = (callbackFnc) => {
+    let number = Number(prompt("Lütfen sayı giriniz"));
+    console.log(callbackFnc(number));
+}
+//dorduncu(ucuncu)
+
+//////////////////////////////////////////////////////////////////
 // promise
+let promiseTutorials = () => {
+
+    let prom = new Promise((resolve, reject) => {
+        // resolve: olumlu dönerse => resolve then çalışır
+        resolve("olumlu sonuc");
+
+        //reject("olumsuz sonuc");
+        // reject : olumsuz dönerse => reject dönerse catch çalışır
+        //new Promise eğer 
+    }).then(
+        () => {
+            console.log("olumlu resolve");
+        }).catch( // sadece 1 tane catch vardır
+            (err) => { console.error(err); }
+        );
+    console.log(prom);
+}
+promiseTutorials()
+
+
+//////////////////////////////////////////////////////////////////
+// asyn/await
 
 // D.O.M
 // event
