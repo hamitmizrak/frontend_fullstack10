@@ -20,14 +20,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="container">
     <!-- start codes -->
-<!-- 
+    <button class="btn btn-primary" onclick="onClickFunction()">onclick</button>
+    <button class="btn btn-success" ondblclick="onClickFunction()">ondblclick</button> <br />
+    <button class="btn btn-success mt-2" onmousewheel="onClickFunction()">onmousewheel</button>
+    <button class="btn btn-success" onmouseup="onClickFunction()">onmouseup</button>
+    <button class="btn btn-success" onmousedown="onClickFunction()">onmousedown</button> <br />
+    <button class="btn btn-success mt-2" onkeydown="onClickFunction()">onkeydown</button>
+    <button class="btn btn-success" onkeyup="onClickFunction()">onkeyup</button> <br />
+    <button class="btn btn-danger mt-2" onclick="otherPage()">other page</button>
+
+    <p id="param1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto non qui incidunt velit similique ab
+        aliquid quam laudantium. Temporibus quae voluptatum tempore consectetur neque quas optio, ad ut aspernatur
+        ullam.
+        Illo quaerat ullam, officiis itaquodit eveniet sapiente repellat voluptas nesciunt officiis quos. Exercitationem
+        deleniti tenetur, perferendis architecto natus minima ad sed modi, unde ea nulla alias rerum tempore incidunt.
+    </p>
+    <p id="secret_id"></p>
+    <script>
+
+        // mousla üzerine geldiğimde
+        let listenerData = () => {
+            document.getElementById('param1').addEventListener('mouseover', function (e) {
+                // browserın bir yere form göndermesini engellemek
+                e.preventDefault();
+
+                //window.alert("Paragraf izleniyor");
+
+                let secretValue=document.getElementById("secret_id");
+                secretValue.innerHTML="<b><ins>izlendi</ins></b>";
+                // secretValue.innerText="<b><ins>izlendi</ins></b>";
+
+                secretValue.style.color="red";
+                secretValue.style.backgroundColor="black";
+                secretValue.style.padding="1.5rem";
+            });
+        }
+        //üzerinden ayrıldığımda yazı silinsin mi diye sorulsun evet'e tıklarsak silinsin yoksa silinmesin
+        listenerData();
+    </script>
+
+    <!-- 
     <img 
     src="img/books-8067850_640.jpg" 
     alt="it isn't showing picture" 
     > -->
-<!-- 
+    <!-- 
     <h2 style="text-align: center; text-transform: capitalize; margin-top:10px; font-size:30px">Java Öğrenimi</h2>
     <p>Loremui.quod possimus sint non eligendi adipisci qui quam, aliquid mollitia delectus eaque modi iste cupiditate suscipit enim minima nisi! Quibusdam maxime voluptas, iste tempore minima nulla.</p>
     -->
@@ -128,8 +167,8 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
-        <!-- external js -->
-        <script src="template.js"></script>
+    <!-- external js -->
+    <script src="template.js"></script>
 </body>
 
 </html>

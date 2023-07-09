@@ -869,8 +869,23 @@ promiseFunctionComputer();
 // ES8
 //////////////////////////////////////////////////////////////////
 
-// D.O.M
 // event
+let onClickFunction = () => {
+    alert("Event Çalıştı")
+}
+
+const otherPage = () => {
+    let isLogic =
+        window.confirm("Başka sayfa gitmek istiyor musunuz ?")
+            ? window.location = "http://www.google.com" : "Bu sayfada kalındı";
+    alert(isLogic)
+}
+
+// listener
+
+
+
+// D.O.Ms
 // jquery
 
 // Sıfırdan project yaz(Frontend ile)
