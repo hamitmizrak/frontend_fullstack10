@@ -23,20 +23,23 @@
       <div class="col-md-10 bg-dark p-4 text-white">
         <div class="row">
           <p>Vergi Oranını Seçiniz.</p>
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-warning ">
-              <input type="radio" name="taxName" value="1" checked> %1
-            </label>
-            <label class="btn btn-outline-warning">
-              <input type="radio" name="taxName" value="8"> %8
-            </label>
-            <label class="btn btn-outline-warning">
-              <input type="radio" name="taxName" value="18"> %18
-            </label>
-            <label class="btn btn-outline-warning active">
-              <input type="radio" name="taxName" value="0"> Yüzde Gir
-            </label>
-          </div>
+
+          <form name="formA">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-outline-warning ">
+                <input type="radio" name="taxName" value="1" checked> %1
+              </label>
+              <label class="btn btn-outline-warning">
+                <input type="radio" name="taxName" value="8"> %8
+              </label>
+              <label class="btn btn-outline-warning">
+                <input type="radio" name="taxName" value="18"> %18
+              </label>
+              <label class="btn btn-outline-warning active">
+                <input type="radio" name="taxName" value="0"> Yüzde Gir
+              </label>
+            </div>
+          </form>
 
           <form class="form-inline mt-4">
             <div class="row">
@@ -55,18 +58,18 @@
 
           <div class="btn-group btn-group-toggle mt-4" data-toggle="buttons">
             <label class="btn btn-primary ">
-              <input type="radio" name="options2" id="option1" autocomplete="off" checked> Vergi Dahil
+              <input type="radio" name="IsTaxIncluded" value="true" checked> Vergi Dahil
             </label>
             <label class="btn btn-outline-primary">
-              <input type="radio" name="options2" id="option2" autocomplete="off">Vergi Hariç
+              <input type="radio" name="IsTaxIncluded" value="false">Vergi Hariç
             </label>
           </div>
 
           <div class="row mt-4">
             <div class="col-md-6">Ara Toplam</div>
             <div class="col-md-6" id="subTotal">0.00</div>
-            <div class="col-md-6" >Vergi</div>
-            <div class="col-md-6"id="tax">0.00</div>
+            <div class="col-md-6">Vergi</div>
+            <div class="col-md-6" id="tax">0.00</div>
             <div class="col-md-6">Genel Toplam</div>
             <div class="col-md-6" id="grand_total">0.00</div>
           </div>
@@ -79,30 +82,58 @@
   </div>
 
   <script>
+
+    var taxName = document.forms["formA"].elements["taxName"];
+    for (var i = 0, max = taxName.length; i < max; i++) {
+      taxName[i].onclick = function () {
+        document.getElementById("taxRate").value = this.value;
+      }
+    }
+
+    let isTaxIncluded=true;
+    var radioIncludeValue = document.getElementsByName("IsTaxIncluded");
+    for (var i = 0, max = radioIncludeValue.length; i < max; i++) {
+      radioIncludeValue[i].onclick = function () {
+        //console.log(this.value);
+        let isTax=this.value;
+        if(isTax=="true"){
+          isTaxIncluded=true;
+        }else{
+          isTaxIncluded=false;
+        }
+
+      }
+    }
+
     let radioButtonTax = () => {
-      //alert("deneme")
-      let radioValue = document.getElementsByName("taxName");
-      console.log(radioValue);
+      let radioValue = document.getElementsByName("taxRate");
+      //console.log(radioValue);
 
       // hangi radio buttona tıkladnığını bilsin
       for (let i = 0; i < radioValue.length; i++) {
+        //alert(radioValue[i].checked)
         if (radioValue[i].checked) {
           document.getElementById("taxRate").value = radioValue[i].value;
         }
       }
-      calculateVat()
-    }
 
-    // Vergi Oranı ve Tutar Kdv hesaplaması
-    let calculateVat = () => {
-      let taxRate =Number(document.getElementById("taxRate").value) ;
+      let taxRate = Number(document.getElementById("taxRate").value);
       let amount = Number(document.getElementById("amount").value);
 
-      document.getElementById("subTotal").innerText=amount;
-      document.getElementById("tax").innerText=taxRate;
-      document.getElementById("grand_total").innerText=(amount+(amount*taxRate/100));
-    }
+      document.getElementById("subTotal").innerText = amount;
+      let taxData=document.getElementById("tax").innerText;
+      if(isTaxIncluded){
+        taxData= taxRate;
+      }else{
+        taxData = 0;
+      }
+      document.getElementById("tax").value = taxData;
+      document.getElementById("grand_total").innerText = (amount + (amount * taxData / 100));
+    
+   }
 
+    // Vergi Oranı ve Tutar Kdv hesaplaması
+  
     /*
     bütün dataları sıfırla
     Yüzde tıkladığımda Vergi oranı Focus olsun
