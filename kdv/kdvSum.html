@@ -34,7 +34,7 @@
               <input type="radio" name="taxName" value="18"> %18
             </label>
             <label class="btn btn-outline-warning active">
-              <input type="radio" name="taxName" value="40"> Yüzde Gir
+              <input type="radio" name="taxName" value="0"> Yüzde Gir
             </label>
           </div>
 
@@ -64,14 +64,13 @@
 
           <div class="row mt-4">
             <div class="col-md-6">Ara Toplam</div>
-            <div class="col-md-6">0.00</div>
-            <div class="col-md-6">Vergi</div>
-            <div class="col-md-6">0.00</div>
+            <div class="col-md-6" id="subTotal">0.00</div>
+            <div class="col-md-6" >Vergi</div>
+            <div class="col-md-6"id="tax">0.00</div>
             <div class="col-md-6">Genel Toplam</div>
-            <div class="col-md-6">0.00</div>
+            <div class="col-md-6" id="grand_total">0.00</div>
           </div>
-          <p id="resultTax">asdasd</p>
-          <button class="btn btn-danger" onclick="calculateVat()">KDV HESAPLA</button>
+          <button class="btn btn-danger" onclick="radioButtonTax()">KDV HESAPLA</button>
 
         </div>
       </div>
@@ -81,18 +80,36 @@
 
 
   <script>
-    let calculateVat=()=>{
+    let radioButtonTax = () => {
       //alert("deneme")
-      let radioValue=document.getElementsByName("taxName");
+      let radioValue = document.getElementsByName("taxName");
       console.log(radioValue);
 
       // hangi radio buttona tıkladnığını bilsin
-      for(let i = 0;i<radioValue.length;i++){
-        if(radioValue[i].checked){
-          alert(radioValue[i].value);
+      for (let i = 0; i < radioValue.length; i++) {
+        if (radioValue[i].checked) {
+          document.getElementById("taxRate").value = radioValue[i].value;
         }
       }
+
+      calculateVat()
     }
+
+    // Vergi Oranı ve Tutar Kdv hesaplaması
+    let calculateVat = () => {
+      let taxRate =Number(document.getElementById("taxRate").value) ;
+      let amount = Number(document.getElementById("amount").value);
+
+      document.getElementById("subTotal").innerText=amount;
+      document.getElementById("tax").innerText=taxRate;
+      document.getElementById("grand_total").innerText=(amount+(amount*taxRate/100));
+    }
+
+    /*
+    bütün dataları sıfırla
+    Yüzde tıkladığımda Vergi oranı Focus olsun
+    LocalStorage Eklensin
+    */
 
   </script>
 
