@@ -25,16 +25,16 @@
           <p>Vergi Oranını Seçiniz.</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-warning ">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> %1
+              <input type="radio" name="taxName" value="1" checked> %1
             </label>
             <label class="btn btn-outline-warning">
-              <input type="radio" name="options" id="option2" autocomplete="off"> %8
+              <input type="radio" name="taxName" value="8"> %8
             </label>
             <label class="btn btn-outline-warning">
-              <input type="radio" name="options" id="option3" autocomplete="off"> %18
+              <input type="radio" name="taxName" value="18"> %18
             </label>
             <label class="btn btn-outline-warning active">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Yüzde Gir
+              <input type="radio" name="taxName" value="40"> Yüzde Gir
             </label>
           </div>
 
@@ -42,12 +42,12 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group  mb-2 mt-3 ">
-                  <input type="password" class="form-control" id="inputPassword2" placeholder="Vergi Oranı">
+                  <input type="text" class="form-control" id="taxRate" placeholder="Vergi Oranı">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group  mb-2 mt-3">
-                  <input type="password" class="form-control" id="inputPassword2" placeholder="Tutar">
+                  <input type="text" class="form-control" id="amount" placeholder="Tutar">
                 </div>
               </div>
             </div>
@@ -55,10 +55,10 @@
 
           <div class="btn-group btn-group-toggle mt-4" data-toggle="buttons">
             <label class="btn btn-primary ">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Vergi Dahil
+              <input type="radio" name="options2" id="option1" autocomplete="off" checked> Vergi Dahil
             </label>
             <label class="btn btn-outline-primary">
-              <input type="radio" name="options" id="option2" autocomplete="off">Vergi Hariç
+              <input type="radio" name="options2" id="option2" autocomplete="off">Vergi Hariç
             </label>
           </div>
 
@@ -70,14 +70,32 @@
             <div class="col-md-6">Genel Toplam</div>
             <div class="col-md-6">0.00</div>
           </div>
+          <p id="resultTax">asdasd</p>
+          <button class="btn btn-danger" onclick="calculateVat()">KDV HESAPLA</button>
+
         </div>
       </div>
       <div class="col-md-1"></div>
     </div>
   </div>
+
+
   <script>
+    let calculateVat=()=>{
+      //alert("deneme")
+      let radioValue=document.getElementsByName("taxName");
+      console.log(radioValue);
+
+      // hangi radio buttona tıkladnığını bilsin
+      for(let i = 0;i<radioValue.length;i++){
+        if(radioValue[i].checked){
+          alert(radioValue[i].value);
+        }
+      }
+    }
 
   </script>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
