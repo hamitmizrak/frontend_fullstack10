@@ -822,9 +822,9 @@ let callBackFunctionComputer = () => {
     // objeye yeni bir data ekle callbackfunction göster
     listComputerPrice({ computerName: "call back computer4", price: 400 }, listComputerName);
 }
-callBackFunctionComputer();
+//callBackFunctionComputer();
 
-console.log("");
+//console.log("");
 
 // Promise
 let promiseFunctionComputer = () => {
@@ -862,7 +862,7 @@ let promiseFunctionComputer = () => {
     // ComputerName 
     listComputerName();
 }
-promiseFunctionComputer();
+//promiseFunctionComputer();
 
 //////////////////////////////////////////////////////////////////
 // asyn/await
@@ -881,11 +881,70 @@ const otherPage = () => {
     alert(isLogic)
 }
 
+
+ // mousla üzerine geldiğimde
+ let listenerOnData = () => {
+    document.getElementById('param1').addEventListener('mouseover', function (e) {
+        // browserın bir yere form göndermesini engellemek
+        e.preventDefault();
+        //window.alert("Paragraf izleniyor");
+
+        let secretValue = document.getElementById("secret_id");
+        secretValue.innerHTML = "<b><ins>izlendi</ins></b>";
+        // secretValue.innerText="<b><ins>izlendi</ins></b>";
+
+        secretValue.style.color = "red";
+        secretValue.style.backgroundColor = "black";
+        secretValue.style.padding = "1.5rem";
+        secretValue.style.display = "block"; 
+    });
+}
+//listenerOnData();
+
+
 // listener
+// D.O.M
+
+// Paragraf üzerinden ayrıldığımda soru sorsun, başka sayfaya gidilsin mi? 
+// evet tıklarsam başka sayfaya gitsin 
+// hayır'a tıklarsam ekran temizlensin
+let listenerOffData = () => {
+    document.getElementById('param1').addEventListener('mouseout', function (e) {
+        // browserın bir yere form göndermesini engellemek
+        e.preventDefault();
+        let secretValue = document.getElementById("secret_id");
+        let isLogic = window.confirm("başka sayfaya gidilsin mi?  ?");
+        if (isLogic) {
+            window.location = "http://www.google.com"
+        } else {
+            secretValue.style.display = "none";
+        }
+    });
+}
+//listenerOffData();
+
+/////////////////////////////////////////////////////////////
+// Local storage
+// const adi=localStorage.setItem("adi44","Hamit");
+// console.log(localStorage);
+// const getAdi=localStorage.getItem("adi44");
+// console.log(getAdi);
+
+// const deleteAdi=localStorage.removeItem("adi44");
+// console.log(deleteAdi);
+
+let dizi=["java","html","css","js"];
+localStorage.setItem("dizi1",dizi);
+console.log(localStorage);
 
 
+localStorage.setItem("dizi2",JSON.stringify(dizi));
+const getDizi=JSON.parse(localStorage.getItem("dizi2"))
+console.log(getDizi);
+console.log(getDizi[0]);
 
-// D.O.Ms
+
+/////////////////////////////////////////////////////////////
 // jquery
 
 // Sıfırdan project yaz(Frontend ile)
