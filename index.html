@@ -39,26 +39,41 @@
     </p>
     <p id="secret_id"></p>
     <script>
-
         // mousla üzerine geldiğimde
-        let listenerData = () => {
+        let listenerOnData = () => {
             document.getElementById('param1').addEventListener('mouseover', function (e) {
                 // browserın bir yere form göndermesini engellemek
                 e.preventDefault();
-
                 //window.alert("Paragraf izleniyor");
 
-                let secretValue=document.getElementById("secret_id");
-                secretValue.innerHTML="<b><ins>izlendi</ins></b>";
+                let secretValue = document.getElementById("secret_id");
+                secretValue.innerHTML = "<b><ins>izlendi</ins></b>";
                 // secretValue.innerText="<b><ins>izlendi</ins></b>";
 
-                secretValue.style.color="red";
-                secretValue.style.backgroundColor="black";
-                secretValue.style.padding="1.5rem";
+                secretValue.style.color = "red";
+                secretValue.style.backgroundColor = "black";
+                secretValue.style.padding = "1.5rem";
             });
         }
-        //üzerinden ayrıldığımda yazı silinsin mi diye sorulsun evet'e tıklarsak silinsin yoksa silinmesin
-        listenerData();
+        listenerOnData();
+
+        // Paragraf üzerinden ayrıldığımda soru sorsun, başka sayfaya gidilsin mi? 
+        // evet tıklarsam başka sayfaya gitsin 
+        // hayır'a tıklarsam ekran temizlensin
+        let listenerOffData = () => {
+            document.getElementById('param1').addEventListener('mouseout', function (e) {
+                // browserın bir yere form göndermesini engellemek
+                e.preventDefault();
+                let secretValue = document.getElementById("secret_id");
+                let isLogic = window.confirm("başka sayfaya gidilsin mi?  ?");
+                if (isLogic) {
+                    window.location = "http://www.google.com"
+                } else {
+                    secretValue.style.display = "none";
+                }
+            });
+        }
+        listenerOffData();
     </script>
 
     <!-- 
